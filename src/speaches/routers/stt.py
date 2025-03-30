@@ -176,6 +176,7 @@ def transcribe_file(
             temperature=temperature,
             vad_filter=vad_filter,
             hotwords=hotwords,
+            condition_on_previous_text=False,
         )
         segments = TranscriptionSegment.from_faster_whisper_segments(segments)
 
